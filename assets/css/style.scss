@@ -1,0 +1,211 @@
+/*
+ * Main stylesheet for Jeeves' Electrical Engineering portfolio.
+ *
+ * This file uses CSS variables to make theming simple. The colors
+ * derive from the synthwave/retrowave aesthetic: deep blacks,
+ * neon pinks, cyan and sunset orange, inspired by the synthwave
+ * palette described in resources about the genre’s visual aesthetic,
+ * which favour high contrast neon colours on dark backgrounds【772386594550028†L381-L384】.
+ */
+
+/* Root variables for colours and fonts */
+:root {
+  /* Primary colour palette */
+  --color-bg: #0b0021;      /* deep purple/black base */
+  --color-pink: #ff6ad5;    /* hot pink accent */
+  --color-cyan: #00ffff;    /* cyan accent */
+  --color-orange: #ff9f43;  /* sunset orange accent */
+  --color-green-glow: #39ff14; /* aura glow for logo on hover */
+
+  /* Typography */
+  --font-ui: 'Fira Code', 'VT323', monospace;
+  --font-body: 'Roboto Mono', 'SF Mono', 'Menlo', monospace;
+
+  /* Layout measurements */
+  --nav-height: 60px;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-cyan);
+  background-color: var(--color-bg);
+  /* Use the generated circuit board pattern as a subtle background. */
+  background-image: url('../images/background.png');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0 0;
+  /* Slight blur to create an out‑of‑focus effect */
+  filter: blur(0);
+  animation: moveBackground 60s linear infinite;
+}
+
+/* Keyframes to scroll the background diagonally forever */
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+a {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-orange);
+}
+
+/* Header and navigation */
+header {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo button */
+.logo {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-image: url('../images/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  /* Slight green glow on hover representing aura */
+  filter: drop-shadow(0 0 8px var(--color-green-glow));
+}
+
+/* Navigation bar container */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(11, 0, 33, 0.8);
+  backdrop-filter: blur(4px);
+  border-bottom: 2px solid var(--color-pink);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 15px 10px;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--color-cyan);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--color-pink);
+  color: var(--color-bg);
+}
+
+/* Main content area */
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - var(--nav-height) - 80px);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-ui);
+  color: var(--color-pink);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--color-cyan);
+}
+
+/* Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-pink);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(255, 106, 213, 0.3);
+}
+
+.project-card h3 {
+  color: var(--color-orange);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--color-cyan);
+}
+
+/* Blog post list */
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--color-pink);
+}
+
+.post-item a {
+  font-size: 1.2rem;
+  color: var(--color-orange);
+}
+
+.post-item a:hover {
+  color: var(--color-cyan);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  nav a {
+    padding: 12px 5px;
+    font-size: 0.9rem;
+  }
+  main {
+    padding: 1rem;
+  }
+}

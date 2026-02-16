@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <header>
+      {% include header.html %}
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <p style="text-align:center; margin-top:2rem; color: var(--color-cyan); font-size: 0.8rem;">
+        &copy; {{ site.time | date: '%Y' }} {{ site.title }}
+      </p>
+    </footer>
+  </body>
+</html>

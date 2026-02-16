@@ -1,0 +1,36 @@
+# Site settings for Jeeves' Electrical Engineering Portfolio
+title: Jeeves' EE Portfolio
+description: >
+  Portfolio site for an Electrical Engineering student with an emphasis
+  on Integrated Circuit Design. This site is built with Jekyll and
+  showcases projects, a résumé, and technical blog posts.
+baseurl: "" # Set this if the site will be served from a sub‑path.
+url: ""     # The base hostname & protocol for your site.
+
+# Markdown and Sass configuration
+markdown: kramdown
+sass:
+  style: compressed
+
+# Build settings
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Exclude any files you don’t want processed.
+exclude:
+  - README.md
+
+# Defaults for project and post front matter
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
