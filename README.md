@@ -66,3 +66,4 @@ Create a Markdown file in `_posts/` using:
 
 - No custom unsupported plugins are used.
 - Site is configured for standard GitHub Pages Jekyll builds.
+- CI validates Jekyll builds on pull requests and pushes to `main` via `.github/workflows/jekyll-build-guard.yml`.
