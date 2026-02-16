@@ -1,0 +1,22 @@
+---
+layout: default
+title: Technical Log
+page_key: posts
+permalink: /posts/
+description: Reverse-chronological technical writeups.
+---
+<section class="view-panel pixel-frame">
+  <p class="view-kicker">NODE 03 // POSTS</p>
+  <h1 class="section-title hover-text" data-scramble>TECHNICAL_LOG</h1>
+  <p class="lead-line">Reverse chronology with compressed summaries and direct jump to full notes.</p>
+
+  <ol class="log-list">
+    {% for post in site.posts %}
+      <li class="log-item pixel-frame">
+        <a class="log-link hover-text" data-scramble href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="log-date">[{{ post.date | date: "%Y.%m.%d" }}]</span>
+        <p class="log-summary">{{ post.excerpt | strip_html | strip_newlines | truncate: 190 }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

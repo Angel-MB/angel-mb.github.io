@@ -1,0 +1,34 @@
+---
+layout: default
+title: Project Matrix
+page_key: projects
+permalink: /projects/
+description: Rotating IC project matrix powered by Jekyll collection data.
+---
+<section class="view-panel pixel-frame">
+  <p class="view-kicker">NODE 01 // PROJECTS</p>
+  <h1 class="section-title hover-text" data-scramble>PROJECT_MATRIX</h1>
+  <p class="lead-line">
+    Dynamic IC blocks rendered from <code>site.projects</code>. Priority cycles continuously.
+  </p>
+
+  {% assign sorted_projects = site.projects | sort: "priority" %}
+  <div class="chip-grid" data-project-grid>
+    {% for project in sorted_projects %}
+      <article class="project-chip pixel-frame" data-project-chip>
+        <div class="chip-head">
+          <h2 class="chip-title hover-text" data-scramble>{{ project.title }}</h2>
+          <p class="chip-priority">P{{ project.priority | default: "?" }}</p>
+        </div>
+        {% if project.image %}
+          <img class="chip-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+        {% endif %}
+        {% if project.tech_stack %}
+          <p class="chip-stack">{{ project.tech_stack | join: " // " }}</p>
+        {% endif %}
+        <p class="chip-summary">{{ project.content | markdownify | strip_html | strip_newlines | truncate: 180 }}</p>
+        <p class="chip-rail" aria-hidden="true">[[]]::{% cycle "0x3A", "0x5F", "0x9C", "0xB7" %}::{{ forloop.index0 | plus: 11 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

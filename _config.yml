@@ -1,7 +1,7 @@
-title: Angel | Electrical Engineering Portfolio
+title: Angel B. | IC Design Portfolio
 description: >
-  Classical technical portfolio for an Electrical Engineering student focused on
-  integrated circuit design, verification, and hardware prototyping.
+  Retrowave and brutalist technical portfolio for Angel B., Electrical
+  Engineering student focused on integrated circuit design.
 baseurl: ""
 url: ""
 
@@ -14,12 +14,16 @@ sass:
 
 permalink: /posts/:title/
 
-logo: /assets/img/logo-placeholder.svg
+collections:
+  projects:
+    output: false
+
+logo: /assets/img/logo.png
 resume_path: /assets/resume/resume.pdf
 
 profile:
-  name: Angel
-  role: Electrical Engineering Student
+  name: Angel B.
+  role: IC Design Student
   focus: Integrated Circuit Design
 
 defaults:
@@ -32,4 +36,4 @@ defaults:
       type: posts
     values:
       layout: post
-      author: Angel
+      author: Angel B.

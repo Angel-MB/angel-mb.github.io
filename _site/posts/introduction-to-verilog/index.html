@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verification-First Verilog Module Bring-Up | Angel B. | IC Design Portfolio</title>
+  <meta
+    name="description"
+    content="Retrowave and brutalist technical portfolio for Angel B., Electrical Engineering student focused on integrated circuit design."
+  >
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="page-main">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="scene-color" aria-hidden="true"></div>
+  <div class="scene-grid" aria-hidden="true"></div>
+  <div class="outline-field" aria-hidden="true">
+    <span class="outline-shape outline-shape-a"></span>
+    <span class="outline-shape outline-shape-b"></span>
+    <span class="outline-shape outline-shape-c"></span>
+    <span class="outline-shape outline-shape-d"></span>
+    <span class="outline-shape outline-shape-e"></span>
+    <span class="outline-shape outline-shape-f"></span>
+  </div>
+  <div class="digit-field" data-digit-field aria-hidden="true"></div>
+  <div class="ascii-field" data-ascii-field aria-hidden="true"></div>
+
+  <header class="site-header shell" role="banner">
+    <div class="identity-left">
+      <p class="brand-left hover-text" data-scramble>ANGEL B.</p>
+    </div>
+    <a class="logo-wrap" href="/" aria-label="Angel B portfolio home">
+      <img
+        src="/assets/img/logo.png"
+        alt="Angel B. | IC Design Portfolio logo"
+        onerror="this.alt='ANGEL B. LOGO';"
+      >
+    </a>
+    <div class="identity-right">
+      <p class="identity-line hover-text" data-scramble>Digital Design Focus</p>
+      <p class="identity-line hover-text" data-scramble>Embedded Hardware</p>
+      <p class="identity-line hover-text" data-scramble>I Go To RPI BTW</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="shell">
+      <ul class="site-nav-list">
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/" href="/">Main</a></li>
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/projects/" href="/projects/">Projects</a></li>
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/resume/" href="/resume/">Resume</a></li>
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/posts/" href="/posts/">Posts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="site-main shell">
+    <article class="post-layout pixel-frame">
+  <p class="view-kicker">NODE 03A // ENTRY</p>
+  <h1 class="section-title">Verification-First Verilog Module Bring-Up</h1>
+  <p class="log-date">[2026.02.15]</p>
+  <div class="post-content">
+    <p>I try to validate behavior before polishing implementation details. For student
+projects, this keeps logic drift under control when requirements evolve quickly.</p>
+
+<h2 id="bring-up-checklist">Bring-up checklist</h2>
+
+<ol>
+  <li>Lock interface assumptions (<code class="language-plaintext highlighter-rouge">clk</code>, <code class="language-plaintext highlighter-rouge">rst_n</code>, handshake timing).</li>
+  <li>Write a minimal directed testbench that catches obvious polarity issues.</li>
+  <li>Add randomized stimulus around legal operating bounds.</li>
+  <li>Capture waveforms for one clean pass and one intentional failure case.</li>
+</ol>
+
+<h2 id="example-rtl-slice">Example RTL slice</h2>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">pulse_counter</span> <span class="p">(</span>
+  <span class="kt">input</span>  <span class="kt">wire</span>       <span class="n">clk</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="kt">wire</span>       <span class="n">rst_n</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="kt">wire</span>       <span class="n">pulse_in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span>  <span class="n">count</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clk</span> <span class="kt">or</span> <span class="kt">negedge</span> <span class="n">rst_n</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">rst_n</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">count</span> <span class="o">&lt;=</span> <span class="mi">8'd0</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pulse_in</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">count</span> <span class="o">&lt;=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">8'd1</span><span class="p">;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>The module is intentionally small, but the method scales. Interface stability
+plus early tests reduces late debug time during synthesis and implementation.</p>
+
+  </div>
+  <p class="post-back"><a class="hover-text" data-scramble href="/posts/">RETURN_TO_TECHNICAL_LOG</a></p>
+</article>
+
+  </main>
+
+  <footer class="site-footer shell">
+    <p>&copy; 2026 Angel B. | Build: Native Jekyll</p>
+  </footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,160 +1,48 @@
 ---
 layout: default
-title: Portfolio
-description: Angel's electrical engineering portfolio focused on integrated circuit design.
+title: Main Terminal
+page_key: main
+description: Main terminal for Angel B., IC design student portfolio.
 ---
-<section id="main" class="section container flow" tabindex="-1">
-  <header class="section-header flow">
-    <p class="section-kicker">Profile Summary</p>
-    <h1>Angel</h1>
-    <p>
-      Electrical Engineering student concentrating on integrated circuit design,
-      verification discipline, and practical hardware prototyping.
-    </p>
-  </header>
-
-  <div class="split-grid">
-    <article class="panel flow">
-      <h2>Specification Table</h2>
-      <table class="spec-table">
-        <tbody>
-          <tr>
-            <th scope="row">Focus</th>
-            <td>Integrated Circuit Design (Digital + Mixed-Signal)</td>
-          </tr>
-          <tr>
-            <th scope="row">Tools</th>
-            <td>Cadence Virtuoso, LTspice, ngspice, KiCad, Verilog, Python</td>
-          </tr>
-          <tr>
-            <th scope="row">Interests</th>
-            <td>Low-power design, timing closure, analog front-ends, ASIC flow</td>
-          </tr>
-          <tr>
-            <th scope="row">Current Coursework</th>
-            <td>VLSI Design, CMOS Analog IC, Signals and Systems, Semiconductor Physics</td>
-          </tr>
-          <tr>
-            <th scope="row">Availability</th>
-            <td>Seeking Summer 2026 ASIC/IC internship opportunities</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-
-    <article class="panel flow">
-      <h2>Operating Notes</h2>
-      <pre class="terminal-block"><code>angel@lab:~$ profile --summary
-name: Angel
-discipline: Electrical Engineering
-specialization: Integrated Circuit Design
-workflow: schematic -&gt; simulation -&gt; layout -&gt; verification
-
-angel@lab:~$ objective --current
-build reliable silicon intuition through measurable, testable designs</code></pre>
-      <div class="ratings-wrap flow">
-        <h3>Recommended Operating Conditions</h3>
-        <table class="ratings-table">
-          <tbody>
-            <tr>
-              <th scope="row">Design Cadence</th>
-              <td>Weekly tapeout-style checkpoints</td>
-            </tr>
-            <tr>
-              <th scope="row">Verification Target</th>
-              <td>100% pass on directed + randomized regression</td>
-            </tr>
-            <tr>
-              <th scope="row">Preferred Team</th>
-              <td>Cross-functional IC design and validation</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="projects" class="section container flow" tabindex="-1">
-  <header class="section-header flow">
-    <p class="section-kicker">Selected Work</p>
-    <h2>Projects</h2>
-    <p>Project cards are rendered from <code>_data/projects.yml</code> for quick maintenance.</p>
-  </header>
-
-  <div class="project-grid">
-    {% for project in site.data.projects %}
-      <article class="project-card flow">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.purpose }}</p>
-        <p class="project-meta">{{ project.year }} | {{ project.status }}</p>
-        <ul class="tag-list" aria-label="Project tags">
-          {% for tag in project.tags %}
-            <li><span class="tag">{{ tag }}</span></li>
-          {% endfor %}
-        </ul>
-        <p class="project-links">
-          {% if project.links.repo %}
-            <a href="{{ project.links.repo }}" target="_blank" rel="noopener noreferrer">Repository</a>
-          {% endif %}
-          {% if project.links.report %}
-            <a href="{{ project.links.report }}" target="_blank" rel="noopener noreferrer">Report</a>
-          {% endif %}
-          {% if project.links.demo %}
-            <a href="{{ project.links.demo }}" target="_blank" rel="noopener noreferrer">Demo</a>
-          {% endif %}
-        </p>
-      </article>
-    {% endfor %}
-  </div>
-</section>
-
-<section id="resume" class="section container flow" tabindex="-1">
-  <header class="section-header flow">
-    <p class="section-kicker">Professional Profile</p>
-    <h2>Resume</h2>
-    <p>View the embedded PDF or download a local copy.</p>
-  </header>
-
-  <p>
-    <a class="button" href="{{ site.resume_path | relative_url }}" download>
-      Download Resume (PDF)
-    </a>
+<section class="view-panel pixel-frame">
+  <p class="view-kicker">NODE 00 // MAIN</p>
+  <h1 class="section-title hover-text" data-scramble>SUBJECT://ANGEL_B</h1>
+  <p class="lead-line">
+    Aggressive silicon-focused workflow with verification discipline and analog intuition.
   </p>
 
-  <div class="resume-frame">
-    <object data="{{ site.resume_path | relative_url }}" type="application/pdf" class="resume-viewer">
-      <p>
-        Embedded preview is unavailable.
-        <a href="{{ site.resume_path | relative_url }}" target="_blank" rel="noopener noreferrer">
-          Open resume in a new tab
-        </a>.
-      </p>
-    </object>
+  <section class="greeting-shell pixel-frame" aria-label="Greeting">
+    <figure class="greeting-portrait">
+      <img src="{{ '/assets/img/angel-greeting.png' | relative_url }}" alt="Angel B in a neon workstation scene">
+    </figure>
+    <div class="greeting-message">
+      <p class="greeting-text">HEY, PROBABLY NOT HOME RIGHT NOW.</p>
+      <p class="greeting-text">PROBABLY AT WORK OR SOMETHING.</p>
+      <p class="greeting-text">LEAVE A MESSAGE AFTER THE TONE AND STUFF LIKE THAT.</p>
+    </div>
+    <figure class="greeting-portrait">
+      <img src="{{ '/assets/img/angel-greeting.png' | relative_url }}" alt="" aria-hidden="true">
+    </figure>
+  </section>
+
+  <div class="boot-panel" role="status" aria-live="polite">
+    <p class="boot-line"><span class="boot-label">STATUS:</span> <span class="boot-value">IC Design Student</span></p>
+    <p class="boot-line"><span class="boot-label">DOMAIN:</span> <span class="boot-value">Digital + Mixed-Signal Systems</span></p>
+    <p class="boot-line"><span class="boot-label">TOOLCHAIN:</span> <span class="boot-value">Verilog | Cadence | LTspice | ngspice | KiCad</span></p>
+    <p class="boot-line"><span class="boot-label">MODE:</span> <span class="boot-warning">HARDCORE HARDWARE</span></p>
+    <p class="boot-line"><span class="boot-label">RUNTIME:</span> <span class="boot-value">[2026.02.16] BUILD ONLINE</span></p>
   </div>
-</section>
 
-<section id="posts" class="section container flow" tabindex="-1">
-  <header class="section-header flow">
-    <p class="section-kicker">Technical Writing</p>
-    <h2>Posts</h2>
-    <p>Reverse chronological notes on design practice, verification, and lab workflows.</p>
-  </header>
+  <div class="portal-grid">
+    <a class="portal-link hover-text" data-scramble href="{{ '/projects/' | relative_url }}">OPEN_PROJECT_MATRIX</a>
+    <a class="portal-link hover-text" data-scramble href="{{ '/resume/' | relative_url }}">OPEN_RESUME_ARCHIVE</a>
+    <a class="portal-link hover-text" data-scramble href="{{ '/posts/' | relative_url }}">OPEN_TECH_LOG</a>
+    <span class="portal-link portal-static">SIGNAL://STABLE</span>
+  </div>
 
-  <ol class="post-listing">
-    {% for post in site.posts %}
-      <li class="post-row">
-        <article class="flow">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">
-            {{ post.date | date: "%B %d, %Y" }}
-            {% if post.tags and post.tags.size > 0 %}
-              | {{ post.tags | join: ", " }}
-            {% endif %}
-          </p>
-          <p>{{ post.excerpt | strip_html | truncate: 170 }}</p>
-        </article>
-      </li>
-    {% endfor %}
-  </ol>
+  <pre class="ascii-slab" aria-hidden="true">::/BOOT_LOG/:: 0x1F 0x2A 0x7D
+[[[ IC_LINK_SYNC ]]]
+<>[]{}==>>--++##
+00110110|01010011
+SIG_CORE:READY</pre>
 </section>

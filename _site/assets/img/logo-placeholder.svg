@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Angel IC Portfolio Logo Placeholder</title>
+  <desc id="logoDesc">A simple chip icon followed by the text Angel IC Portfolio.</desc>
+  <rect x="1" y="1" width="358" height="98" rx="8" fill="#EFE7DA" stroke="#B6A68F" stroke-width="2"/>
+  <g transform="translate(18 22)" fill="none" stroke="#0B1F3A" stroke-width="2">
+    <rect x="0" y="0" width="56" height="56" rx="6"/>
+    <rect x="15" y="15" width="26" height="26" fill="#F6F1E7"/>
+    <path d="M-8 10h8M-8 20h8M-8 30h8M-8 40h8M56 10h8M56 20h8M56 30h8M56 40h8M10 -8v8M20 -8v8M30 -8v8M40 -8v8M10 56v8M20 56v8M30 56v8M40 56v8"/>
+  </g>
+  <text x="92" y="44" fill="#111214" font-family="'Libre Baskerville', serif" font-size="28" font-weight="700">Angel</text>
+  <text x="92" y="68" fill="#2B2F36" font-family="'IBM Plex Mono', monospace" font-size="13" letter-spacing="1.8">IC PORTFOLIO</text>
+</svg>

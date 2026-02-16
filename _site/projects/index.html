@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Matrix | Angel B. | IC Design Portfolio</title>
+  <meta
+    name="description"
+    content="Rotating IC project matrix powered by Jekyll collection data."
+  >
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="page-projects">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="scene-color" aria-hidden="true"></div>
+  <div class="scene-grid" aria-hidden="true"></div>
+  <div class="outline-field" aria-hidden="true">
+    <span class="outline-shape outline-shape-a"></span>
+    <span class="outline-shape outline-shape-b"></span>
+    <span class="outline-shape outline-shape-c"></span>
+    <span class="outline-shape outline-shape-d"></span>
+    <span class="outline-shape outline-shape-e"></span>
+    <span class="outline-shape outline-shape-f"></span>
+  </div>
+  <div class="digit-field" data-digit-field aria-hidden="true"></div>
+  <div class="ascii-field" data-ascii-field aria-hidden="true"></div>
+
+  <header class="site-header shell" role="banner">
+    <div class="identity-left">
+      <p class="brand-left hover-text" data-scramble>ANGEL B.</p>
+    </div>
+    <a class="logo-wrap" href="/" aria-label="Angel B portfolio home">
+      <img
+        src="/assets/img/logo.png"
+        alt="Angel B. | IC Design Portfolio logo"
+        onerror="this.alt='ANGEL B. LOGO';"
+      >
+    </a>
+    <div class="identity-right">
+      <p class="identity-line hover-text" data-scramble>Digital Design Focus</p>
+      <p class="identity-line hover-text" data-scramble>Embedded Hardware</p>
+      <p class="identity-line hover-text" data-scramble>I Go To RPI BTW</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="shell">
+      <ul class="site-nav-list">
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/" href="/">Main</a></li>
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/projects/" href="/projects/">Projects</a></li>
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/resume/" href="/resume/">Resume</a></li>
+        <li class="site-nav-item"><a class="site-nav-link" data-route="/posts/" href="/posts/">Posts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="site-main shell">
+    <section class="view-panel pixel-frame">
+  <p class="view-kicker">NODE 01 // PROJECTS</p>
+  <h1 class="section-title hover-text" data-scramble>PROJECT_MATRIX</h1>
+  <p class="lead-line">
+    Dynamic IC blocks rendered from <code>site.projects</code>. Priority cycles continuously.
+  </p>
+
+  
+  <div class="chip-grid" data-project-grid>
+    
+      <article class="project-chip pixel-frame" data-project-chip>
+        <div class="chip-head">
+          <h2 class="chip-title hover-text" data-scramble>Current Mirror Array Characterization</h2>
+          <p class="chip-priority">P1</p>
+        </div>
+        
+          <img class="chip-image" src="/assets/images/project-breadboard.jpg" alt="Current Mirror Array Characterization">
+        
+        
+          <p class="chip-stack">Cadence Virtuoso // Spectre // MATLAB</p>
+        
+        <p class="chip-summary">Designed and swept a ratioed mirror bank across PVT corners to quantify mismatch,compliance, and output resistance drift for bias distribution in mixed-signal blocks.</p>
+        <p class="chip-rail" aria-hidden="true">[[]]::0x3A::11</p>
+      </article>
+    
+      <article class="project-chip pixel-frame" data-project-chip>
+        <div class="chip-head">
+          <h2 class="chip-title hover-text" data-scramble>Static Timing Review Toolflow</h2>
+          <p class="chip-priority">P2</p>
+        </div>
+        
+          <img class="chip-image" src="/assets/images/background.png" alt="Static Timing Review Toolflow">
+        
+        
+          <p class="chip-stack">Verilog // Python // OpenSTA</p>
+        
+        <p class="chip-summary">Built a repeatable script chain for constraint linting, path classification, andsetup/hold delta tracking to catch regression timing drift before synthesis closure.</p>
+        <p class="chip-rail" aria-hidden="true">[[]]::0x5F::12</p>
+      </article>
+    
+      <article class="project-chip pixel-frame" data-project-chip>
+        <div class="chip-head">
+          <h2 class="chip-title hover-text" data-scramble>Verification-First RTL Harness</h2>
+          <p class="chip-priority">P3</p>
+        </div>
+        
+          <img class="chip-image" src="/assets/images/project-breadboard.jpg" alt="Verification-First RTL Harness">
+        
+        
+          <p class="chip-stack">Verilog // Icarus Verilog // GTKWave</p>
+        
+        <p class="chip-summary">Implemented directed and randomized stimulus harnesses for module bring-up withwaveform checkpoints, assertion hooks, and structured pass/fail logging.</p>
+        <p class="chip-rail" aria-hidden="true">[[]]::0x9C::13</p>
+      </article>
+    
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer shell">
+    <p>&copy; 2026 Angel B. | Build: Native Jekyll</p>
+  </footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
