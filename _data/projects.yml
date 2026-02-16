@@ -1,0 +1,77 @@
+- title: 8-bit SAR ADC Behavioral Model and Verification
+  purpose: Built and validated a mixed-signal SAR ADC model to evaluate ENOB trade-offs before transistor implementation.
+  year: 2026
+  status: Academic Lab
+  tags:
+    - Mixed-Signal
+    - Verilog
+    - Python
+    - MATLAB
+  links:
+    repo: https://github.com/angel-portfolio/sar-adc-model
+    report: https://github.com/angel-portfolio/sar-adc-model/blob/main/report.pdf
+
+- title: Low-Dropout Regulator Compensation Study
+  purpose: Compared compensation networks for stability across load transients and supply variation in SPICE.
+  year: 2025
+  status: Research Assistantship
+  tags:
+    - Analog IC
+    - SPICE
+    - Loop Stability
+    - Cadence Virtuoso
+  links:
+    repo: https://github.com/angel-portfolio/ldo-compensation-study
+    report: https://github.com/angel-portfolio/ldo-compensation-study/blob/main/lab-notes.md
+
+- title: RISC-V Pipeline Hazard Detection Unit
+  purpose: Designed and simulated a hazard detection block for a student RISC-V core with directed regression tests.
+  year: 2025
+  status: Course Project
+  tags:
+    - RTL
+    - Verilog
+    - FPGA
+    - Verification
+  links:
+    repo: https://github.com/angel-portfolio/rv32i-hazard-unit
+    demo: https://github.com/angel-portfolio/rv32i-hazard-unit#results
+
+- title: CMOS Current Mirror Layout Matching Experiment
+  purpose: Implemented multiple layout strategies and quantified mismatch impact using Monte Carlo and corner sweeps.
+  year: 2025
+  status: Independent Study
+  tags:
+    - Layout
+    - Monte Carlo
+    - Analog IC
+    - DRC/LVS
+  links:
+    repo: https://github.com/angel-portfolio/current-mirror-layout-study
+    report: https://github.com/angel-portfolio/current-mirror-layout-study/blob/main/results-summary.md
+
+- title: Differential Amplifier PCB Characterization Fixture
+  purpose: Designed a compact PCB fixture to validate differential front-end behavior before full IC integration.
+  year: 2024
+  status: Prototyping
+  tags:
+    - PCB
+    - Instrumentation
+    - Analog
+    - LTspice
+  links:
+    repo: https://github.com/angel-portfolio/differential-amp-fixture
+    demo: https://github.com/angel-portfolio/differential-amp-fixture#measurement-plan
+
+- title: PLL Loop Filter Design Sandbox
+  purpose: Created a scriptable loop-filter sizing workflow and checked lock-time versus phase-noise trade-offs.
+  year: 2024
+  status: Personal Project
+  tags:
+    - PLL
+    - Control Theory
+    - Python
+    - Frequency Synthesis
+  links:
+    repo: https://github.com/angel-portfolio/pll-loop-filter-sandbox
+    report: https://github.com/angel-portfolio/pll-loop-filter-sandbox/blob/main/design-notes.md

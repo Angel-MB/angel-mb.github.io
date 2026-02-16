@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% include head.html %}
-  </head>
-  <body>
-    <header>
-      {% include header.html %}
-    </header>
-    <main>
-      {{ content }}
-    </main>
-    <footer>
-      <p style="text-align:center; margin-top:2rem; color: var(--color-cyan); font-size: 0.8rem;">
-        &copy; {{ site.time | date: '%Y' }} {{ site.title }}
-      </p>
-    </footer>
-  </body>
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" role="banner">
+    {% include header.html %}
+  </header>
+  {% include navbar.html %}
+  <main id="main-content" class="site-main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
 </html>

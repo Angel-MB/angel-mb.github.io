@@ -1,10 +1,12 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post-layout container flow">
+  <p class="section-kicker">Technical Note</p>
   <h1>{{ page.title }}</h1>
-  <p style="color: var(--color-orange); font-size: 0.9rem; margin-bottom:1rem;">
-    {{ page.date | date: '%B %d, %Y' }}
-  </p>
-  {{ content }}
+  <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
+  <div class="post-content flow">
+    {{ content }}
+  </div>
+  <p class="post-back"><a href="{{ '/' | relative_url }}#posts">Back to posts</a></p>
 </article>

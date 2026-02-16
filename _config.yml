@@ -1,36 +1,35 @@
-# Site settings for Jeeves' Electrical Engineering Portfolio
-title: Jeeves' EE Portfolio
+title: Angel | Electrical Engineering Portfolio
 description: >
-  Portfolio site for an Electrical Engineering student with an emphasis
-  on Integrated Circuit Design. This site is built with Jekyll and
-  showcases projects, a résumé, and technical blog posts.
-baseurl: "" # Set this if the site will be served from a sub‑path.
-url: ""     # The base hostname & protocol for your site.
+  Classical technical portfolio for an Electrical Engineering student focused on
+  integrated circuit design, verification, and hardware prototyping.
+baseurl: ""
+url: ""
 
-# Markdown and Sass configuration
 markdown: kramdown
+kramdown:
+  input: GFM
+
 sass:
   style: compressed
 
-# Build settings
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
+permalink: /posts/:title/
 
-# Exclude any files you don’t want processed.
-exclude:
-  - README.md
+logo: /assets/img/logo-placeholder.svg
+resume_path: /assets/resume/resume.pdf
 
-# Defaults for project and post front matter
+profile:
+  name: Angel
+  role: Electrical Engineering Student
+  focus: Integrated Circuit Design
+
 defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
   - scope:
       path: ""
       type: posts
     values:
       layout: post
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: project
+      author: Angel

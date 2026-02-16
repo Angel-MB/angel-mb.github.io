@@ -1,12 +1,15 @@
-<!-- Header with logo and sticky navigation -->
-<div class="header-container">
-  <a href="{{ '/' | relative_url }}" class="logo" aria-label="Home"></a>
-  <nav>
-    <ul>
-      <li><a href="{{ '/' | relative_url }}">Main</a></li>
-      <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-      <li><a href="{{ '/resume/' | relative_url }}">Resume</a></li>
-      <li><a href="{{ '/posts/' | relative_url }}">Posts</a></li>
-    </ul>
-  </nav>
+<div class="site-header-inner container">
+  <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="Go to home">
+    <img
+      class="logo-image"
+      src="{{ site.logo | relative_url }}"
+      alt="{{ site.title }} logo"
+      onerror="this.hidden=true;this.nextElementSibling.hidden=false;"
+    >
+    <span class="logo-fallback" hidden>{{ site.profile.name | default: "Angel" }}</span>
+  </a>
+  <div class="header-meta">
+    <p class="header-title">{{ site.profile.name | default: "Angel" }}</p>
+    <p class="header-subtitle">{{ site.profile.role | default: "Electrical Engineering Student" }}</p>
+  </div>
 </div>
