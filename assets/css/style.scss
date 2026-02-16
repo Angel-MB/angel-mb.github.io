@@ -33,7 +33,7 @@
   --radius-md: 0.45rem;
   --radius-lg: 0.7rem;
 
-  --trace-pattern: url("../images/trace-pattern.svg");
+  --trace-pattern: #{"url(../images/trace-pattern.svg)"};
 }
 
 *,
@@ -166,7 +166,8 @@ pre code {
 }
 
 .container {
-  width: min(var(--container-max), calc(100% - 2 * var(--space-6)));
+  width: calc(100% - 2 * var(--space-6));
+  max-width: var(--container-max);
   margin-inline: auto;
 }
 
@@ -552,7 +553,8 @@ pre code {
 
 @media (max-width: 52rem) {
   .container {
-    width: min(var(--container-max), calc(100% - 2 * var(--space-5)));
+    width: calc(100% - 2 * var(--space-5));
+    max-width: var(--container-max);
   }
 
   .site-header-inner {
