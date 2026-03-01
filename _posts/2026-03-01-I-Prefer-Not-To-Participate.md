@@ -35,4 +35,5 @@ Being a moral person who follows principles isn't easy and I by no means am sayi
 ---
 
 
-![PeterGriffinFortnite](PeterGriffinFortnite.jpg)
+![PeterGriffinFortnite]({{ '/assets/img/PeterGriffinFortnite.jpg' | relative_url }})
+
