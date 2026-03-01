@@ -13,6 +13,7 @@ sass:
   style: compressed
 
 permalink: /posts/:title/
+future: true
 
 collections:
   projects:
