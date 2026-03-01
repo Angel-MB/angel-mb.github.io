@@ -7,6 +7,8 @@ tags:
 ---
 
 	->(None of the messaging in this is the reflected views of any organizations I am associated with, these views are entirely my own. **Please Don't Be Cringe!**)
+
+  
 ## Why I'm Here
 
 Since I've started university again many questions about the future were pushed off to a later date because I thought pragmatically that is a later problem and with things so far away why consider them now. I turn 25 in a couple of months and this is supposed to be where my brain stops developing and it all goes down hill or something? I'm graduating at the end of this year and unfortunately my want to be ambitious and dedicate so many concentrated back to back months to this school has awarded me with less time for those considerations which were due later. 
