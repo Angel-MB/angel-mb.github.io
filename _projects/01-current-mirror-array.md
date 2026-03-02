@@ -1,11 +1,11 @@
 ---
-title: "Current Mirror Array Characterization"
+title: "PLANT AUTO-MOISTURE UNIT"
 tech_stack:
-  - Cadence Virtuoso
-  - Spectre
-  - MATLAB
-image: /assets/images/project-breadboard.jpg
+  - LTspice
+  - Circuit Analysis
+  - Prototyping
+image: /assets/images/Moisture_Physical_Circuit.png
 priority: 1
 ---
-Designed and swept a ratioed mirror bank across PVT corners to quantify mismatch,
-compliance, and output resistance drift for bias distribution in mixed-signal blocks.
+Designed an analog circuit to water plants for a varying times depending on soil
+moisture levels; this utilized AC->DC Converters, Filters, Timing Circuit, & more.

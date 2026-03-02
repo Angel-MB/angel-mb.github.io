@@ -1,11 +1,12 @@
 ---
-title: "Static Timing Review Toolflow"
+title: "WARHAMMER VISOR LIGHTS"
 tech_stack:
-  - Verilog
-  - Python
-  - OpenSTA
-image: /assets/images/background.png
+  - C
+  - RF Analysis
+  - AutoDesk Fusion
+image: /assets/images/Dark Angels Glow.png
 priority: 2
 ---
-Built a repeatable script chain for constraint linting, path classification, and
-setup/hold delta tracking to catch regression timing drift before synthesis closure.
+Created transmitter receiver pair for helmet specifications under restrictions
+concering heat, power, weight, dimensions, and longevity while making a deliverable
+product.

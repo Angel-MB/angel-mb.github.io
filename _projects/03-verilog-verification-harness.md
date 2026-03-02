@@ -1,11 +1,11 @@
 ---
-title: "Verification-First RTL Harness"
+title: "NOSTLAGIA ULTRA [WIP]"
 tech_stack:
-  - Verilog
-  - Icarus Verilog
-  - GTKWave
-image: /assets/images/project-breadboard.jpg
+  - OS-Architecture
+  - Firmware Optimization
+  - Bash
+image: /assets/images/Nostalgia Ultra ConsoleV2.png
 priority: 3
 ---
-Implemented directed and randomized stimulus harnesses for module bring-up with
-waveform checkpoints, assertion hooks, and structured pass/fail logging.
+Developing multi-console emulation and interface on Orange-Pi enabling switching
+between OS based on current external switch state.
