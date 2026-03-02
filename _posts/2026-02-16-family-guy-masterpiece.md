@@ -6,6 +6,8 @@ tags:
   - Family Guy
   - New England
 ---
+(DISCLAIMER: THIS POST IS ENTIRELY AI GENERATED. THE PROMPT WAS "WRITE A POST ABOUT WHY FAMILY GUY IS A MASTERPIECE. And then insert it into the post section with a picture of Peter Griffin from family guy.")
+
 As someone living in New England, *Family Guy* always hits a little harder.
 The regional references, weather jokes, random local energy, and fast-paced
 chaos all feel familiar in the best way.
