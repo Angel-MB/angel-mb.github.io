@@ -44,5 +44,5 @@ Now I pose the question to you all as I assume most people who are reading this 
 
 
 
-[![Image Of Family Guy and It's Super Funny Let's Life](Family_Guy_Original_FunnyPicture_EXE.png)
+[![Image Of Family Guy and It's Super Funny Let's Life]({{ '/assets/img/PeterGriffinFortnite.jpg' | relative_url }})
 
