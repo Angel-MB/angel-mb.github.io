@@ -44,5 +44,4 @@ Now I pose the question to you all as I assume most people who are reading this 
 
 
 
-[![Image Of Family Guy and It's Super Funny Let's Life]({{ '/assets/img/Family_Guy_Original_FunnyPicture_EXE.png' | relative_url }})
-
+[![Image Of Family Guy and It's Super Funny Let's Life]({{ '/assets/img/Family_Guy_Original_FunnyPicture_EXE.png' | relative_url }}{: width="450"})]
